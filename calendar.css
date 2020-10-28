@@ -1,0 +1,99 @@
+
+        .addItems {
+            margin: 25px 0;
+        }
+
+        .test {
+            display: flex;
+            flex-wrap: wrap;
+            width: 800px;
+        }
+
+        .aMonthBox {
+            display: flex;
+            flex-wrap: wrap;
+            width: 800px;
+        }
+
+        .weekBoxBorder {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 800px;
+        }
+
+        .dayBoxBorder {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            width: 800px;
+        }
+
+        .itemBorder {
+            width: 100px;
+            height: 100px;
+            padding: 6px 0;
+            margin:0 6px;
+            display: flex;
+            flex-direction: column;
+            border-width: 1px;
+            border-style: solid;
+            border-color: transparent transparent #aaa transparent;
+        }
+
+        .todayColor {
+            display: flex;
+            flex-direction: column;
+            background: #f90;
+            padding: 6px;
+            width: 100px;
+            height: 100px;
+        }
+
+        .monthBorder {
+            width: 800px;
+            height: 30px;
+            background: #aff;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .weekBorder {
+            width: 100px;
+            height: 30px;
+            background: #afa;
+            padding: 7px;
+            text-align: center;
+        }
+
+        .weekBorderHoliday {
+            width: 100px;
+            height: 30px;
+            background: #ffa;
+            padding: 6px;
+            text-align: center;
+        }
+
+        .tagBorder {
+            width: 90px;
+            height: 20px;
+            background: #6c9;
+            color: #fff;
+            margin: 2px auto;
+            border-radius: 5px;
+            padding: 2px 4px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .holidaytagBorder {
+            width: 90px;
+            height: 20px;
+            background: #b33;
+            color: #fff;
+            margin: 2px auto;
+            border-radius: 5px;
+            padding: 2px 4px;
+            text-align: center;
+            font-size: 16px;
+        }
