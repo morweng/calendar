@@ -197,3 +197,7 @@ function test_1(){
 function test_2(){
     console.log('test_2')
 }
+
+function test_3(){
+    console.log('test_3')
+}
