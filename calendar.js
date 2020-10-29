@@ -220,3 +220,7 @@ function feauture2_test_2(){
 function feauture2_test_3(){
     console.log('feauture2_test_3')
 }
+
+function addTest_feature_1(){
+    console.log('addTest_feature_1')
+}
