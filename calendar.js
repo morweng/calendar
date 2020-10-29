@@ -206,3 +206,6 @@ function changeStr(num) {
 
 let makeBox_aa=true
 >>>>>>> develop
+function test_1(){
+    console.log('test_1')
+}
