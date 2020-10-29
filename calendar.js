@@ -200,3 +200,7 @@ function test_1(){
 function feauture2_test_1(){
     console.log('feauture2_test_1')
 }
+
+function feauture2_test_2(){
+    console.log('feauture2_test_2')
+}
