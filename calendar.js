@@ -191,32 +191,6 @@ function changeStr(num) {
 
 let makeBox_aa=true
 
-function test_1(){
-    console.log('test_1')
-}
-
-function test_2(){
-    console.log('test_2')
-}
-
-function test_3(){
-    console.log('test_3')
-}
-
-
-function test_4(){
-    console.log('test_4')
-}
-
-function feauture2_test_1(){
-    console.log('feauture2_test_1')
-}
-
-function feauture2_test_2(){
-    console.log('feauture2_test_2')
-}
-
-
-function feauture2_test_3(){
-    console.log('feauture2_test_3')
+function changeTest(){
+    console.log('changeTest')
 }
