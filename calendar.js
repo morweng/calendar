@@ -201,3 +201,8 @@ function test_2(){
 function test_3(){
     console.log('test_3')
 }
+
+
+function test_4(){
+    console.log('test_4')
+}
