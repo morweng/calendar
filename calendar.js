@@ -162,21 +162,6 @@ function makeBox(m, totalDay, firstWeek, lastWeek) {
     test.appendChild(aMonthBox)
 }
 
-<<<<<<< HEAD
-function test(){
-    console.log('test Branch!')
-}
-
-
-function test2(){
-    console.log('test Branch2!')
-}
-
-
-function test3(){
-    console.log('test Branch3!')
-}
-=======
 let changeStr_aa=true
 
 // step.4 將星期幾的num更改為str
@@ -205,7 +190,10 @@ function changeStr(num) {
 }
 
 let makeBox_aa=true
->>>>>>> develop
 function test_1(){
     console.log('test_1')
+}
+
+function test_2(){
+    console.log('test_2')
 }
