@@ -5,14 +5,16 @@ let additems = document.querySelector("#item")
 let user = document.querySelector("#user")
 let itemDate = document.querySelector("#itemDate")
 let itemYear = document.querySelector("#itemYear")
+let tagItems = document.querySelector(".tagItems")
+
 let tag = [{ todo: "Aclass", name: 'Alex', date: '2020-10-13' }, { todo: "Bclass", name: 'Bill', date: '2020-11-01' }]
 let holiday=[{todo: "春節", date: '2020-01-23'},{todo: "春節", date: '2020-01-24'},{todo: "春節", date: '2020-01-25'},{todo: "春節", date: '2020-01-26'},{todo: "春節", date: '2020-01-27'},{todo: "春節", date: '2020-01-28'},{todo: "春節", date: '2020-01-29'},{todo: "228紀念日", date: '2020-02-28'},{todo: "清明節", date: '2020-04-04'},{todo: "端午節", date: '2020-06-25'},{todo: "彈性放假", date: '2020-06-26'},{todo: "中秋節", date: '2020-10-01'},{todo: "彈性放假", date: '2020-10-02'},{todo: "彈性放假", date: '2020-10-09'},{todo: "雙十節", date: '2020-10-10'},{todo: "元旦", date: '2020-01-01'},]
+
 function forAddItem() {
     let newObj = { todo: '', name: '', date: '' }
     newObj.todo = additems.value
     newObj.name = user.value
     newObj.date = itemDate.value
-    console.log('itemDate = ',itemDate)
     tag.push(newObj)
     let m=itemDate.value.split('-')[1]*1
     let d=itemDate.value.split('-')[2]*1
@@ -24,6 +26,10 @@ function forAddItem() {
     }
     tagItem.className = 'tagBorder'
     tagItem.innerHTML = newObj.todo + '-' + newObj.name
+    let tagItem_2 = document.createElement("div")
+    tagItem_2.className = 'tagBorder'
+    tagItem_2.innerHTML = newObj.todo + '-' + newObj.name
+    tagItems.appendChild(tagItem_2)
     a.appendChild(tagItem)
 }
 let chooseYear=document.querySelector("#itemYear")
@@ -40,8 +46,7 @@ function forAddYear(){
         console.log('yearNow = ',yearNow)
         for(let i=0;i<delEl.length;i++){
             delEl[i].remove()
-        }
-        
+        }  
     }
     stepNum++
     console.log('forAddYear = ',stepNum)
@@ -129,6 +134,7 @@ function makeBox(m, totalDay, firstWeek, lastWeek) {
                 tagItem.className = 'tagBorder'
                 tagItem.innerHTML = tag[x].todo + '-' + tag[x].name;
                 itemBox.appendChild(tagItem)
+                tagItems.appendChild(tagItem)
             }
         }
         //產生tag
@@ -190,18 +196,3 @@ function changeStr(num) {
 }
 
 let makeBox_aa=true
-
-function changeTest(){
-    console.log('changeTest')
-}
-
-
-function feauture2_test_3(){
-    console.log('feauture2_test_3')
-}
-
-function addTest_feature_1(){
-    console.log('addTest_feature_1')
-function changeTest_2(){
-    console.log('changeTest_2')
-}
