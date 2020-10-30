@@ -9,16 +9,23 @@
 </head>
 
 <body>
-    <div class="addItems">
-        年份輸入<input type="text" id="itemYear">
-        <button id="addItem" onClick="forAddYear()">ADD-YEAR</button>
-        加入日期<input type="date" id="itemDate">
-        加入人員<input type="text" id="user">
-        新增項目：<input type="text" id="item">
-        <button id="addItem" onClick="forAddItem()">ADD</button>
-    </div>
 
-    <div class="test"></div>
+    <div>
+        <div class="addItems">
+            年份輸入<input type="text" id="itemYear">
+            <button id="addItem" onClick="forAddYear()">ADD-YEAR</button>
+            加入日期<input type="date" id="itemDate">
+            加入人員<input type="text" id="user">
+            新增項目：<input type="text" id="item">
+            <button id="addItem" onClick="forAddItem()">ADD</button>
+        </div>
+        <div class="d-flex">
+            <div class="test"></div>
+            <div class="tagItems-box">
+                <div class="tagItems"></div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.9.1/dayjs.min.js"></script>
     <script src="./calendar.js"></script>
