@@ -1,3 +1,31 @@
+body{
+  background-color: #29506d;
+  color:#042037;
+  font-weight: bold;
+}
+.choose-year{
+  background-color: #718EA4;
+  padding:20px 10px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+}
+.add-item-box{
+  background-color: #496D89;
+  padding:20px 10px;
+  border-radius: 9px;
+}
+.add-item-box p{
+border-bottom: 1px solid #aaa;
+padding-bottom:8px;
+}
+.choose-year button{
+  color: #042037;
+  background-color: #75AF96;
+  border-radius:8px;
+  padding:6px 10px;
+  border: none;
+}
 .tagItems-box{
     margin:20px 10px 10px 10px;
   }
@@ -11,7 +39,41 @@
     display: flex;
   }
   .addItems{
-    margin:25px 0;
+    /* position: fixed; */
+    width: 99%;
+  }
+  .addItems input{
+    border-radius: 5px;
+    border: none;
+    padding:5px;
+    margin:0 6px;
+    outline: none;
+  }
+  .addItem{
+    color: #042037;
+    background-color: #75AF96;
+    border-radius:8px;
+    padding:6px 10px;
+    border: none;
+  }
+  .addItem:hover{
+    outline: none;
+    box-shadow: 0px 3px 8px #123652;
+  }
+  .addItem:active{
+    box-shadow: none;
+    box-shadow: 0px 3px 4px #123652;
+  }
+  #addItem{
+    outline: none;
+  }
+  #addItem:hover{
+    outline: none;
+    box-shadow: 0px 3px 8px #123652;
+  }
+  #addItem:active{
+    box-shadow: none;
+    box-shadow: 0px 3px 4px #123652;
   }
   .test{
     display:flex;
@@ -25,7 +87,7 @@
   }
   .weekBoxBorder{
     display:flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     flex-wrap:wrap;
     width:800px;
   }
@@ -36,14 +98,15 @@
     width:800px;
   }
   .itemBorder{
-    width:100px;
+    width:108px;
     height:100px;
-    padding:6px 0;
+    padding:7px 0;
     display:flex;
+    color:#ccc;
     flex-direction:column;
     border-width: 1px;
     border-style: solid;
-    border-color: #aaa transparent transparent  transparent;
+    border-color: #999 transparent transparent  transparent;
   }
   .itemSpaceBorder{
     width:100px;
@@ -67,32 +130,41 @@
   .monthBorder{
     width:800px;
     height:30px;
-    /* border:1px solid #f00; */
-    background:#aff;
+    font-size: 1.6rem;
+    text-align: center;
+    line-height: 30px;
+    color:#ccc;
+    background:#0F5738;
+    padding: 10px;
     text-align:center;
     margin-top:20px;
   }
   .weekBorder{
     width:100px;
     height:30px;
-    /* border:1px solid #f00; */
-    background:#afa;
+    line-height: 30px;
+    letter-spacing: 2px;
+    border:none;
+    background:#496D89;
     padding:7px;
     text-align:center;
+    /* border:1px solid #f00; */
   }
   .weekBorderHoliday{
     width:100px;
     height:30px;
     /* border:1px solid #f00; */
-    background:#ffa;
-    padding:6px;
+    background:#499272;
+    padding:7px;
     text-align:center;
   }
   .tagBorder{
     width:90px;
     height:20px;
-    background:#6c9;
-    color:#fff;
+    background:#496D89;
+    /* box-shadow: 2px 5px 0px rgba(20,20,20,1); */
+    box-shadow: 0px 3px 8px #123652;
+    color:#ccc;
     margin:2px auto;
     border-radius: 5px;
     padding:2px 4px;
@@ -103,7 +175,8 @@
     width:90px;
     height:20px;
     background:#b33;
-    color:#fff;
+    letter-spacing: 1px;
+    color:#ccc;
     margin:2px auto;
     border-radius: 5px;
     padding:2px 4px;

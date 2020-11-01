@@ -7,23 +7,43 @@ let itemDate = document.querySelector("#itemDate")
 let itemYear = document.querySelector("#itemYear")
 let tagItems = document.querySelector(".tagItems")
 
-let tag = [{ todo: "Aclass", name: 'Alex', date: '2020-10-13' }, { todo: "Bclass", name: 'Bill', date: '2020-11-01' }]
+let tag = [{ todo: "Aclass", name: 'Alex', date: '2020-01-13' }, { todo: "Bclass", name: 'Bill', date: '2020-01-03' }]
 let holiday=[{todo: "春節", date: '2020-01-23'},{todo: "春節", date: '2020-01-24'},{todo: "春節", date: '2020-01-25'},{todo: "春節", date: '2020-01-26'},{todo: "春節", date: '2020-01-27'},{todo: "春節", date: '2020-01-28'},{todo: "春節", date: '2020-01-29'},{todo: "228紀念日", date: '2020-02-28'},{todo: "清明節", date: '2020-04-04'},{todo: "端午節", date: '2020-06-25'},{todo: "彈性放假", date: '2020-06-26'},{todo: "中秋節", date: '2020-10-01'},{todo: "彈性放假", date: '2020-10-02'},{todo: "彈性放假", date: '2020-10-09'},{todo: "雙十節", date: '2020-10-10'},{todo: "元旦", date: '2020-01-01'},]
 
+//新增項目
 function forAddItem() {
+    if(itemDate.value==''||itemDate.value==null){
+        alert('未選擇日期')
+        return false
+    }
+    
     let newObj = { todo: '', name: '', date: '' }
     newObj.todo = additems.value
     newObj.name = user.value
     newObj.date = itemDate.value
+    
+    for(let i=0;i<tag.length;i++){
+        console.log(tag)
+        // let checkLive= tag.findIndex(tag[i]==newObj)
+        console.log(tag[i]==newObj)
+        console.log(tag[i].todo==newObj.todo&&tag[i].name==newObj.name&&tag[i].date==newObj.date)
+        if(tag[i].todo==newObj.todo&&tag[i].name==newObj.name&&tag[i].date==newObj.date){
+            alert("已存在")
+            return false
+        }
+    }
+
     tag.push(newObj)
     let m=itemDate.value.split('-')[1]*1
     let d=itemDate.value.split('-')[2]*1
     let a = document.querySelector(`.month_${m} .day_${d}`)
     let tagItem = document.createElement("div")
+    
+    
     if(a.childNodes.length>3){
-      alert('已超過增加項目')
-      return false
-    }
+        alert('已超過增加項目')
+        return false
+      }
     tagItem.className = 'tagBorder'
     tagItem.innerHTML = newObj.todo + '-' + newObj.name
     let tagItem_2 = document.createElement("div")
@@ -32,6 +52,15 @@ function forAddItem() {
     tagItems.appendChild(tagItem_2)
     a.appendChild(tagItem)
 }
+
+//滑動效果
+
+document.addEventListener('scroll',()=>{
+    let addItems=document.querySelector(".addItems")    
+    addItems.scrollTop=0
+    
+})
+
 let chooseYear=document.querySelector("#itemYear")
 let test = document.querySelector(".test")
 let yearNow='year_'+2020
@@ -41,11 +70,15 @@ let stepNum=0
 //輸入年分
 function forAddYear(){
     let delEl=document.querySelectorAll(`.${yearNow}`)
+    let deltagItems=document.querySelectorAll('.tagBorder')
     if(test.children.length>0){
         console.log('delEl = ',delEl)
         console.log('yearNow = ',yearNow)
         for(let i=0;i<delEl.length;i++){
             delEl[i].remove()
+        }  
+        for(let i=0;i<deltagItems.length;i++){
+            deltagItems[i].remove()
         }  
     }
     stepNum++
@@ -130,11 +163,14 @@ function makeBox(m, totalDay, firstWeek, lastWeek) {
             let personMonth = tag[x].date.split("-")[1]
             let personDay = tag[x].date.split("-")[2]
             let tagItem = document.createElement("div")
+            let tagItem_tagbox = document.createElement("div")
             if (m == personMonth && i == personDay) {
                 tagItem.className = 'tagBorder'
+                tagItem_tagbox.className='tagBorder'
                 tagItem.innerHTML = tag[x].todo + '-' + tag[x].name;
+                tagItem_tagbox.innerHTML = tag[x].todo + '-' + tag[x].name;
                 itemBox.appendChild(tagItem)
-                tagItems.appendChild(tagItem)
+                tagItems.appendChild(tagItem_tagbox)
             }
         }
         //產生tag
@@ -166,6 +202,7 @@ function makeBox(m, totalDay, firstWeek, lastWeek) {
         }
     }
     test.appendChild(aMonthBox)
+    stepNum=0
 }
 
 let changeStr_aa=true
